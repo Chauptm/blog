@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.content{
+    width: 400px;
+    margin: 0px auto;
+}
+
+.dangkythanhvien{
+    width: 400px;
+    border: 1px solid #DDDDDDDD;
+    margin-top: 60px;
+}
+.dangkythanhvien h3{
+    background: #009688;
+    padding: 5px;
+    color: #FFF;
+    text-align: center;
+}
+
+.dangkythanhvien form table tr td{
+    padding: 5px;
+}
+
+.dangkythanhvien form table tr td input{
+    padding: 3px 5px;
+}
+
+.list{
+    background: yellow;
+    padding: 5px;
+    border-radius: 10px ;
+}
+/* .alert-danger{
+    top: 155px;
+    position: absolute;
+    z-index: 5;
+    width: auto;
+    right: 0px;
+} */
+
+.danhsach{
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+}
+.danhsach table{
+    width: 500px;
+    border: 1px solid ;
+}
+.danhsach h3{
+    background: #009688;
+    text-align: center;
+    padding: 5px;
+}
