@@ -25,9 +25,7 @@
             return $this->result;
         }
 
-        public function getData($table){
-            $sql= "SELECT * FROM $table";
-            $this->execute($sql);
+        public function getData(){
             if ($this->result){
                 $data= mysqli_fetch_array($this->result);
             }else{
@@ -35,12 +33,34 @@
             }
             return $data;
         }
+
+        public function findByID($id){
+            $sql= "SELECT * FROM thanhvien WHERE id= '$id'";
+            $this->execute($sql);
+            if ($this->num_rows()!=0){
+                $data= mysqli_fetch_array($this->result);
+            }else{
+                $data=0;
+            }
+            return $data;
+        }
+
+        public function num_rows(){
+            if ($this->result){
+                $num= mysqli_num_rows($this->result);
+            }else{
+                $num= 0;
+            }
+            return $num;
+        }
         // Lay toan bo du lieu:
         public function getAllData($table){
-            if(!$this->result){
+            $sql= "SELECT * FROM $table";
+            $this->execute($sql);
+            if($this->num_rows()==0){
                 $data =0;
             }else {
-                while($datas= $this->getData($table)){
+                while($datas= $this->getData()){
                     $data[]= $datas;
                 }
             }

@@ -51,6 +51,12 @@
                     <?php echo $error['quequan']?>
                 </div>
             <?php } ?>
+
+            <?php
+                if(isset($thanhcong) && in_array('add', $thanhcong)){
+                    echo "them thanh cong";
+                }
+            ?>
             </div>
         </div>
 
